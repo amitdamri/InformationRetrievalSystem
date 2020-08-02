@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="55.0" prefWidth="388.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.MyViewController">
+   <children>
+      <Text layoutX="42.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Engine is running. please wait . . ." textAlignment="CENTER" wrappingWidth="304.6435546875">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

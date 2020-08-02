@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="269.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.MyViewController">
+   <children>
+      <Text layoutX="99.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary Results:" wrappingWidth="249.0909881591797">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Label layoutX="86.0" layoutY="88.0" text="Number of Documents:" />
+      <Label layoutX="86.0" layoutY="125.0" text="Number of Exclusive Terms:" />
+      <Label layoutX="86.0" layoutY="166.0" text="Total time (sec):" />
+      <Button layoutX="210.0" layoutY="210.0" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+      <Label fx:id="lbl_docNum" layoutX="270.0" layoutY="88.0" text="DocsNumber" />
+      <Label fx:id="lbl_exTerms" layoutX="292.0" layoutY="126.0" text="TermsNumber" />
+      <Label fx:id="lbl_totalTime" layoutX="230.0" layoutY="166.0" text="time" />
+   </children>
+</AnchorPane>

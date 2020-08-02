@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="435.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.MyViewController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="347.0" prefWidth="509.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="230.0" layoutY="41.0" prefHeight="69.0" prefWidth="158.0" style="&#10;" text="Entities" textAlignment="CENTER" wrapText="false">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="entitiesTable" layoutY="164.0" prefHeight="270.0" prefWidth="618.0">
+                    <columns>
+                        <TableColumn fx:id="entities" prefWidth="304.0" text="Entities" />
+                  <TableColumn fx:id="ranking" prefWidth="313.0" text="Ranking" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="601.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.MyViewController">
+  <children>
+      <AnchorPane fx:id="mainPane" prefHeight="137.0" prefWidth="900.0">
+         <children>
+            <Text layoutX="400.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A.D Engine" textAlignment="CENTER" wrappingWidth="301.1434020996094">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Text>
+            <TextField fx:id="query" layoutX="229.0" layoutY="105.0" prefHeight="25.0" prefWidth="170.0" promptText="Insert a query" />
+            <TextField fx:id="queriesFilePath" layoutX="616.0" layoutY="105.0" prefHeight="25.0" prefWidth="170.0" promptText="Load a queries file" />
+            <Button layoutX="406.0" layoutY="105.0" mnemonicParsing="false" onAction="#searchQuery" text="RUN" />
+            <Button layoutX="793.0" layoutY="105.0" mnemonicParsing="false" onAction="#chooseQueriesFilePathBrowse" text="Browse" />
+            <Button layoutX="873.0" layoutY="105.0" mnemonicParsing="false" onAction="#searchQueriesFile" text="Search" />
+         </children>
+      </AnchorPane>
+      <SplitPane prefHeight="344.0" prefWidth="1100.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="1098.0">
+               <children>
+                  <TextArea fx:id="corpusPath" layoutX="118.0" layoutY="114.0" prefHeight="26.0" prefWidth="200.0" promptText="Corpus &amp; Stop Words Path" />
+                  <TextArea fx:id="postingsPath" layoutX="118.0" layoutY="174.0" prefHeight="26.0" prefWidth="200.0" promptText="Postings Files Path" />
+                  <Button layoutX="43.0" layoutY="120.0" mnemonicParsing="false" onAction="#chooseCorpusPathBrowse" text="Browse" />
+                  <Button layoutX="43.0" layoutY="180.0" mnemonicParsing="false" onAction="#choosePostingsFilesPathBrowse" text="Browse" />
+                  <RadioButton fx:id="stemmingButton" layoutX="43.0" layoutY="228.0" mnemonicParsing="false" onAction="#enableStemming" text="Stemming" />
+                   <Button layoutX="292.0" layoutY="283.0" mnemonicParsing="false" onAction="#startSystem" text="Start" />
+                  <TableView fx:id="table" layoutX="360.0" layoutY="-1.0" prefHeight="350.0" prefWidth="740.0">
+                    <columns>
+                      <TableColumn fx:id="Terms" maxWidth="400" minWidth="200" prefWidth="400.0" text="Term" />
+                      <TableColumn fx:id="Number" maxWidth="340" minWidth="200" prefWidth="300.0" text="#Number of Appearances" />
+                    </columns>
+                  </TableView>
+                   <RadioButton fx:id="semanticButton" layoutX="43.0" layoutY="255.0" mnemonicParsing="false" onAction="#enableSemantic" text="Semantic" />
+                   <RadioButton fx:id="clickStreamButton" layoutX="43.0" layoutY="283.0" mnemonicParsing="false" onAction="#enableClickStream" text="ClickStream" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane prefHeight="94.0" prefWidth="1100.0">
+         <children>
+            <Button layoutX="113.0" layoutY="35.0" mnemonicParsing="false" onAction="#loadDictionary" text="Load Dictionary" />
+            <Button layoutX="845.0" layoutY="35.0" mnemonicParsing="false" onAction="#resetSystem" text="Reset" />
+            <Button layoutX="499.0" layoutY="35.0" mnemonicParsing="false" onAction="#getDictionary" text="Show Dictionary" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

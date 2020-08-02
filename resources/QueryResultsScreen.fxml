@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="435.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.MyViewController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="347.0" prefWidth="509.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="236.0" layoutY="14.0" prefHeight="69.0" prefWidth="158.0" style="&#10;" text="Query Results" textAlignment="CENTER" wrapText="false">
+          <font>
+            <Font size="25.0" />
+          </font>
+        </Label>
+            <TableView fx:id="queryResultsTable" layoutY="164.0" prefHeight="325.0" prefWidth="668.0">
+              <columns>
+                <TableColumn fx:id="docno" prefWidth="293.0" text="DocNO" />
+                  <TableColumn fx:id="queryNum" prefWidth="324.0" text="Query Number" />
+              </columns>
+            </TableView>
+            <Label layoutX="145.0" layoutY="83.0" text="Number Of Relevant Documents : " />
+            <Label fx:id="lbl_totalRelevantDocs" layoutX="387.0" layoutY="83.0" text="NumOfDocs" />
+            <TextField fx:id="docnoEntities" layoutX="145.0" layoutY="127.0" promptText="Search DOCNO entities" />
+            <Button fx:id="searchEntities" layoutX="334.0" layoutY="127.0" mnemonicParsing="false" onAction="#showTop5EntitiesAction" text="Show" />
+            <Button fx:id="saveQueryFile" layoutX="414.0" layoutY="127.0" mnemonicParsing="false" onAction="#saveQueryResult" text="Save" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
